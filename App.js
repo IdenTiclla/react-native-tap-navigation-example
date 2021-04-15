@@ -78,7 +78,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
                     <View>
                         <Icon style={[{color: tintColor}]} size={25} name={'ios-person'}></Icon>
                     </View>
-                )
+                ),
+                activeColor: '#ffffff',
+                inactiveColor: '#a3c2fa',
+                barStyle: { backgroundColor: '#2163f6' },
             }
         },
         History: {
@@ -88,7 +91,11 @@ const TabNavigator = createMaterialBottomTabNavigator(
                     <View>
                         <Icon style={[{color: tintColor}]} size={25} name={'ios-images'}></Icon>
                     </View>
-                )
+                ),
+                activeColor: '#ffffff',
+                inactiveColor: '#92c5c2',
+                barStyle: { backgroundColor: '#2c6d6a' },
+                
             }
         },
         Cart: {
@@ -96,18 +103,21 @@ const TabNavigator = createMaterialBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: ({ tintColor}) => (
                     <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'compass-outline'}></Icon>
+                        <Icon style={[{color: tintColor}]} size={25} name={'ios-cart'}></Icon>
                     </View>
-                )
+                ),
+                activeColor: '#ffffff',
+                inactiveColor: '#ebaabd',
+                barStyle: { backgroundColor: '#d13560' },
             }
         },
     },
 
     {
         initialRouteName: 'Home',
-        activeColor: '#f0edf6',
-        inactiveColor: '#3e2465',
-        barStyle: { backgroundColor: '#694fad' },
+        activeColor: '#ffffff',
+        inactiveColor: '#bda1f7',
+        barStyle: { backgroundColor: '#6948f4' },
     }
 )
 
