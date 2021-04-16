@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons'
-
+import MapView, { Marker } from 'react-native-maps';
 import {createAppContainer} from 'react-navigation'
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 
@@ -14,7 +14,27 @@ class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Home Screeen</Text>
+                <MapView
+                    style={styles.map}
+                    initialRegion={{
+                        latitude: -17.78686,
+                        longitude: -63.1960,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
+                    }}
+                    
+                    //showsUserLocation={true}
+                    //followsUserLocation={true}
+                >
+                    <Marker
+                    key={1}
+                    coordinate={{latitude:-17.78686, longitude:-63.1960}}
+                    pinColor="green"
+                    title={'mi casa'}
+                    description={'esta es mi ubicacion xddd'}
+                    />
+
+                </MapView>
             </View>
         )
     }
@@ -25,6 +45,7 @@ class ProfileScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>Profile Screeen</Text>
+                <Text>Updated profile screen</Text>
             </View>
         )
     }
@@ -50,13 +71,19 @@ class CartScreen extends React.Component {
     }
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    map: {
+      width: 400,
+      height: 810,
+    },
+  });
 
 
 const TabNavigator = createMaterialBottomTabNavigator(
