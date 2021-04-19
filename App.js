@@ -7,11 +7,53 @@ import MapView, { Marker } from 'react-native-maps';
 import {createAppContainer} from 'react-navigation'
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 
-
+import * as Location from 'expo-location'
 
 
 class HomeScreen extends React.Component {
+
+    constructor(props) {
+        super(props)
+        
+        this.state = {
+            location: null,
+            errorMessage: '',
+            userLocation : {
+
+            }
+        }
+
+        this.getLocation = this.getLocation.bind(this)
+    }
+
+    getLocation = async () => {
+        let { status } = await Location.requestPermissionsAsync();
+        if (status !== 'granted') {
+            this.setState({
+                errorMessage: 'Permissions not granted'
+            })
+            return;
+
+        }
+        let location = await Location.getCurrentPositionAsync({})
+        this.setState({location: location})
+
+
+    }
+
+    componentDidMount() {
+        this.getLocation()
+    }
+
+
     render() {
+        console.log(JSON.stringify(this.state.location))
+        console.log('device connected')
+        console.log('--------------------')
+        console.log('mensage de error' + this.state.errorMessage)
+        console.log(this.state.location)
+        
+        console.log(typeof(this.state.loca))
         return (
             <View style={styles.container}>
                 <MapView
@@ -23,17 +65,9 @@ class HomeScreen extends React.Component {
                         longitudeDelta: 0.0421,
                     }}
                     
-                    //showsUserLocation={true}
-                    //followsUserLocation={true}
+                    showsUserLocation={true}
+                    followsUserLocation={true}
                 >
-                    <Marker
-                    key={1}
-                    coordinate={{latitude:-17.78686, longitude:-63.1960}}
-                    pinColor="green"
-                    title={'mi casa'}
-                    description={'esta es mi ubicacion xddd'}
-                    />
-
                 </MapView>
             </View>
         )
