@@ -1,109 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons'
-import MapView, { Marker } from 'react-native-maps';
+
 import {createAppContainer} from 'react-navigation'
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 
+import { StatusBar } from 'expo-status-bar';
+import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location'
 
-
-class HomeScreen extends React.Component {
-
-    constructor(props) {
-        super(props)
-        
-        this.state = {
-            location: null,
-            errorMessage: '',
-            userLocation : {
-
-            }
-        }
-
-        this.getLocation = this.getLocation.bind(this)
-    }
-
-    getLocation = async () => {
-        let { status } = await Location.requestPermissionsAsync();
-        if (status !== 'granted') {
-            this.setState({
-                errorMessage: 'Permissions not granted'
-            })
-            return;
-
-        }
-        let location = await Location.getCurrentPositionAsync({})
-        this.setState({location: location})
+import HomeScreen from './screens/HomeScreen'
+import CartScreen from './screens/CartScreen'
+import ProfileScreen from './screens/ProfileScreen'
+import HistoryScreen from './screens/HistoryScreen'
 
 
-    }
-
-    componentDidMount() {
-        this.getLocation()
-    }
 
 
-    render() {
-        console.log(JSON.stringify(this.state.location))
-        console.log('device connected')
-        console.log('--------------------')
-        console.log('mensage de error' + this.state.errorMessage)
-        console.log(this.state.location)
-        
-        console.log(typeof(this.state.loca))
-        return (
-            <View style={styles.container}>
-                <MapView
-                    style={styles.map}
-                    initialRegion={{
-                        latitude: -17.78686,
-                        longitude: -63.1960,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
-                    }}
-                    
-                    showsUserLocation={true}
-                    followsUserLocation={true}
-                >
-                </MapView>
-            </View>
-        )
-    }
-}
-
-class ProfileScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Profile Screeen</Text>
-                <Text>Updated profile screen</Text>
-            </View>
-        )
-    }
-}
-
-class HistoryScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>History Screeen</Text>
-            </View>
-        )
-    }
-}
-
-class CartScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Cart Screeen</Text>
-            </View>
-        )
-    }
-}
 
 
 const styles = StyleSheet.create({
