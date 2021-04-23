@@ -11,10 +11,11 @@ import { StatusBar } from 'expo-status-bar';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location'
 
-import HomeScreen from './screens/HomeScreen'
+
 import CartScreen from './screens/CartScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import HistoryScreen from './screens/HistoryScreen'
+import MapScreen from './screens/MapScreen';
 
 
 
@@ -38,11 +39,11 @@ const styles = StyleSheet.create({
 const TabNavigator = createMaterialBottomTabNavigator(
     {
         Home: {
-            screen: HomeScreen,
+            screen: MapScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor}) => (
                     <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'ios-home'}></Icon>
+                        <Icon style={[{color: tintColor}]} size={25} name={'compass-outline'}></Icon>
                     </View>
                 )
             }
@@ -74,19 +75,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
                 
             }
         },
-        Cart: {
-            screen: CartScreen,
-            navigationOptions: {
-                tabBarIcon: ({ tintColor}) => (
-                    <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'ios-cart'}></Icon>
-                    </View>
-                ),
-                activeColor: '#ffffff',
-                inactiveColor: '#ebaabd',
-                barStyle: { backgroundColor: '#d13560' },
-            }
-        },
+        
     },
 
     {

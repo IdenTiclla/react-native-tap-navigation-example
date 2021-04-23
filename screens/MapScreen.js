@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   });
 
 
-export default class HomeScreen extends React.Component {
+export default class MapScreen extends React.Component {
 
     constructor(props) {
         super(props)
