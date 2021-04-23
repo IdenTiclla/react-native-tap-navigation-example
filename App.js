@@ -12,10 +12,10 @@ import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location'
 
 
-import CartScreen from './screens/CartScreen'
-import ProfileScreen from './screens/ProfileScreen'
-import HistoryScreen from './screens/HistoryScreen'
-import MapScreen from './screens/MapScreen';
+
+import Places from './screens/Places'
+import Settings from './screens/Settings'
+import Map from './screens/Map';
 
 
 
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
 
 const TabNavigator = createMaterialBottomTabNavigator(
     {
-        Home: {
-            screen: MapScreen,
+        Map: {
+            screen: Map,
             navigationOptions: {
                 tabBarIcon: ({ tintColor}) => (
                     <View>
@@ -48,12 +48,12 @@ const TabNavigator = createMaterialBottomTabNavigator(
                 )
             }
         },
-        Profile: {
-            screen: ProfileScreen,
+        Places: {
+            screen: Places,
             navigationOptions: {
                 tabBarIcon: ({ tintColor}) => (
                     <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'ios-person'}></Icon>
+                        <Icon style={[{color: tintColor}]} size={25} name={'newspaper-outline'}></Icon>
                     </View>
                 ),
                 activeColor: '#ffffff',
@@ -61,12 +61,12 @@ const TabNavigator = createMaterialBottomTabNavigator(
                 barStyle: { backgroundColor: '#2163f6' },
             }
         },
-        History: {
-            screen: HistoryScreen,
+        Settings: {
+            screen: Settings,
             navigationOptions: {
                 tabBarIcon: ({ tintColor}) => (
                     <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'ios-images'}></Icon>
+                        <Icon style={[{color: tintColor}]} size={25} name={'settings-outline'}></Icon>
                     </View>
                 ),
                 activeColor: '#ffffff',
@@ -79,7 +79,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
     },
 
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'Map',
         activeColor: '#ffffff',
         inactiveColor: '#bda1f7',
         barStyle: { backgroundColor: '#6948f4' },

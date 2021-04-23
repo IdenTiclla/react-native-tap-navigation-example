@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     },
   });
 
-export default class HistoryScreen extends React.Component {
+export default class Settings extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>History Screeen xd</Text>
+                <Text>History Screeen xdd</Text>
             </View>
         )
     }

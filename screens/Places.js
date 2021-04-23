@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
   });
 
-export default class ProfileScreen extends React.Component {
+export default class Places extends React.Component {
     render() {
         return (
             <View style={styles.container}>
