@@ -19,7 +19,7 @@ export default class Settings extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>History Screeen xdd</Text>
+                <Text>Settings Screen</Text>
             </View>
         )
     }

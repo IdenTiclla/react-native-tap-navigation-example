@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import PlaceCard from '../components/PlaceCard'
 
 
 const styles = StyleSheet.create({
@@ -14,15 +14,20 @@ const styles = StyleSheet.create({
       width: 400,
       height: 810,
     },
+    places: {
+        marginTop: 20,
+    }
   });
 
 export default class Places extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Profile Screeen</Text>
-                <Text>Updated profile screen xd</Text>
-            </View>
+            <ScrollView style={styles.places}>
+                <PlaceCard></PlaceCard>
+                <PlaceCard></PlaceCard>
+                <PlaceCard></PlaceCard>
+                <PlaceCard></PlaceCard>
+            </ScrollView>
         )
     }
 }
