@@ -7,10 +7,13 @@ import { View, Alert } from 'react-native'
 
 
 export default class PlaceCard extends React.Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return (
             <View>
-                <Card onPress={()=> console.log('tocaste el card')}>
+                <Card onPress={this.props.onPressCard}>
                     <Card.Content>
                         <Title>Card title</Title>
                         <Paragraph>Card content</Paragraph>

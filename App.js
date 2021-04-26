@@ -17,6 +17,8 @@ import Places from './screens/Places'
 import Settings from './screens/Settings'
 import Map from './screens/Map';
 
+import MyStack from './screens/MyStack'
+
 
 
 
@@ -49,7 +51,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
             }
         },
         Places: {
-            screen: Places,
+            screen: MyStack,
             navigationOptions: {
                 tabBarIcon: ({ tintColor}) => (
                     <View>

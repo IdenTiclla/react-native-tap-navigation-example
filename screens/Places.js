@@ -20,10 +20,13 @@ const styles = StyleSheet.create({
   });
 
 export default class Places extends React.Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return (
             <ScrollView style={styles.places}>
-                <PlaceCard></PlaceCard>
+                <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo')}></PlaceCard>
                 <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
