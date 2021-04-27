@@ -5,11 +5,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import {createAppContainer} from 'react-navigation'
-import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 
-import { StatusBar } from 'expo-status-bar';
-import MapView, { Marker } from 'react-native-maps';
-import * as Location from 'expo-location'
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
 
 
 
@@ -38,56 +37,58 @@ const styles = StyleSheet.create({
   });
 
 
-const TabNavigator = createMaterialBottomTabNavigator(
-    {
-        Map: {
-            screen: Map,
-            navigationOptions: {
-                tabBarIcon: ({ tintColor}) => (
-                    <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'compass-outline'}></Icon>
-                    </View>
-                )
-            }
-        },
-        Places: {
-            screen: MyStack,
-            navigationOptions: {
-                tabBarIcon: ({ tintColor}) => (
-                    <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'newspaper-outline'}></Icon>
-                    </View>
-                ),
-                activeColor: '#ffffff',
-                inactiveColor: '#a3c2fa',
-                barStyle: { backgroundColor: '#2163f6' },
-            }
-        },
-        Settings: {
-            screen: Settings,
-            navigationOptions: {
-                tabBarIcon: ({ tintColor}) => (
-                    <View>
-                        <Icon style={[{color: tintColor}]} size={25} name={'settings-outline'}></Icon>
-                    </View>
-                ),
-                activeColor: '#ffffff',
-                inactiveColor: '#92c5c2',
-                barStyle: { backgroundColor: '#2c6d6a' },
-                
-            }
-        },
-        
-    },
 
-    {
-        initialRouteName: 'Map',
-        activeColor: '#ffffff',
-        inactiveColor: '#bda1f7',
-        barStyle: { backgroundColor: '#6948f4' },
+const Tab = createMaterialBottomTabNavigator()
+
+
+export default class App extends React.Component {
+    render() {
+        return (
+            <NavigationContainer>
+                <Tab.Navigator>
+                    <Tab.Screen 
+                        name="Map" 
+                        component={Map} 
+                        options={{
+                            tabBarIcon: ({ tintColor}) => (
+                                <View>
+                                    <Icon 
+                                        style={[{color: tintColor}]}
+                                        size={25}
+                                        name={'compass-outline'}></Icon>
+                                </View>
+                            )
+                        }}
+                        />
+                    <Tab.Screen 
+                        name="Places"
+                        component={MyStack}
+                        options={{
+                            tabBarIcon: ({ tintColor}) => (
+                                <View>
+                                    <Icon 
+                                        style={[{color: tintColor}]}
+                                        size={25} 
+                                        name={'newspaper-outline'}></Icon>
+                                </View>
+                            ),
+                            
+                        }}
+                        />
+                    <Tab.Screen 
+                        name="Settings"
+                        component={Settings}
+                        options={{
+                            tabBarIcon: ({ tintColor}) => (
+                                <View>
+                                    <Icon style={[{color: tintColor}]} size={25} name={'settings-outline'}></Icon>
+                                </View>
+                            ),
+                        }}
+                        />
+                </Tab.Navigator>
+            </NavigationContainer>
+          )    
     }
-)
-
-// para cambiar iconos ve a la pagina ionicons 
-
-export default createAppContainer(TabNavigator)
+    
+}

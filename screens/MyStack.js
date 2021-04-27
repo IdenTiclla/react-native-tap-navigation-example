@@ -19,8 +19,6 @@ function MyStack() {
   
   export default function App() {
     return (
-      <NavigationContainer>
         <MyStack />
-      </NavigationContainer>
     );
   }

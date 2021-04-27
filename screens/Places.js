@@ -26,7 +26,7 @@ export default class Places extends React.Component {
     render() {
         return (
             <ScrollView style={styles.places}>
-                <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo')}></PlaceCard>
+                <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{person:{name:'iden', lastname:'ticlla'}})}></PlaceCard>
                 <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
                 <PlaceCard></PlaceCard>
