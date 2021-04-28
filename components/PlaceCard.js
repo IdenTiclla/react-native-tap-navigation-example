@@ -15,7 +15,7 @@ export default class PlaceCard extends React.Component {
             <View>
                 <Card onPress={this.props.onPressCard}>
                     <Card.Content>
-                        <Title>Card title</Title>
+                        <Title>{this.props.sitio.title}</Title>
                         <Paragraph>Card content</Paragraph>
                     </Card.Content>
                     <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />

@@ -55,6 +55,7 @@ export default class Map extends React.Component {
 
 
     render() {
+        /*
         console.log(JSON.stringify(this.state.location))
         console.log('device connected')
         console.log('--------------------')
@@ -62,6 +63,7 @@ export default class Map extends React.Component {
         console.log(this.state.location)
         
         console.log(typeof(this.state.loca))
+        */
         return (
             <View style={styles.container}>
                 <MapView
