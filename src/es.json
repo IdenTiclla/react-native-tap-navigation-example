@@ -1,68 +1,132 @@
 [
     {
+        "id": 1,
+        "latitude":-17.64287440739365,
+        "longitude":-63.140713587154195,
         "title": "Aeropuerto Internacional Viru-Viru",
         "description": "El aeropuerto Viru Viru debe su nombre a una yerba medicinal que se llama bira bira y que abunda en los terrenos del aeropuerto que inicialmente era una zona de entrenamiento de tiro y bombardeo de la Fuerza Aérea Boliviana, después fue escogida para la construcción del aeropuerto su inauguración fue el 12 de julio de 1984 durante el mandato del presidente Hernán Siles Suazo su pista tiene una longitud de 3500 metros y dispone de una terminal de pasajeros, terminal de aviación general y una terminal de carga con dos plataformas además de un bloque técnico independiente donde se encuentra la torre de control dando así todas las comodidades tanto para pasajeros nacionales e internacionales y facilidades para la llegada y salida de carga nacional e internacional.",
-        "video": "https://www.youtube.com/watch?v=GqhNoG8zIpE"
-        
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=GqhNoG8zIpE",
+        "image":"https://www.aeropuertosdelmundo.com.ar/fotos/vvi-aeropuerto.jpg"
     },
     {
+        "id": 2,
+        "latitude":-17.77423609298659,
+        "longitude":-63.18310335925675,
         "title": "Biblioteca Municipal y Centro Cultural Hamacas",
         "description": "La Biblioteca Municipal Hamacas se encuentra ubicada en el Distrito N° 2, U.V. 37 M.Z. EQ, beneficiando directamente a una población aproximada de 83.000 habitantes, que residen en el Distrito 2, Se encuentra ubicado en el cuadrante noreste de los distritos consolidados dentro del 4to. Anillo. Tiene como límites por el Noreste, el 4to. Anillo; por el Sureste el 2do. Anillo y la Av. Brasil; por Oeste la Av. Cristo Redentor. La Biblioteca Municipal Hamacas, es una edificación de dos niveles, misma que cuenta con una sala de Usos Múltiples en Planta Baja, destinada a Talleres, proyección y exposiciones, con una capacidad para 300 personas. En Planta Alta, se encuentran un espacio específico para almacenamiento bibliográfico y préstamos de libros. Incluyendo salas de lectura y multimedia (espacios para computadoras), sala de lectura infantil, con una capacidad para 150 alumnos de nivel primario y secundario.",
-        "video": ""
+        "audio":"url",
+        "video": "",
+        "image":""
     },
     {
+        "id": 3,
+        "latitude":-17.75952419144264,
+        "longitude":-63.185554660330375,
         "title": "Zoologico Santa Cruz",
         "description": "El zoológico Santacruz, fundado el 3 de mayo de 1975 por el zootecnista Gonzalo Chacón Rueda, Santandereano. La autoridad ambiental de ese entonces INDERENA busca apoyo para el cuidado de los animales silvestres que son incautados, el primer ejemplar que llega a la finca Santacruz fue un saíno y así continúan llegando otros ejemplares de fauna silvestre y nace la idea de abrir las puertas al público después de obtener el permiso correspondiente y desde ese entonces el zoológico Santacruz continua al cuidado de cientos de animales decomisados por la autoridad ambiental CAR, en el año 2001 con el fin de fortalecer las actividades propias de una organización de este tipo y de acuerdo a los lineamientos de la Estrategia Mundial de Zoológicos se crea la Fundación Zoológico Santacruz, con el fin de empoderarse aún más de las actividades conservación, investigación, educación y recreación, garantizando así el bienestar de nuestro animal y creando experiencia para los diferentes grupos de visitantes.",
-        "video": "https://www.youtube.com/watch?v=Y3kva-MlSqA&t=46s"
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=Y3kva-MlSqA&t=46s",
+        "image":"https://zoosantacruz.org/wp-content/uploads/2015/06/historia2_2.jpg"
     },
     {
+        "id": 4,
+        "latitude":-17.770367550812242,
+        "longitude":-63.18249916965014,
         "title": "El Cristo Redentor",
         "description": "El Cristo Redentor fue erigido en la década de los años 60, su construcción está ligada a un importante evento de la Iglesia católica. Fue de los primeros monumentos que tuvo la ciudad y es uno de los más altos exponentes y símbolos de fe, lucha y unión, tanto que a sus pies se han desarrollado innumerables eventos trascendentales. La imponente escultura ha visto crecer la ciudad y recibe y despide a los viajeros que llegan a las tierras del Gran Grigotá. El Cristo Redentor, de 7,5 metros de altura y de brazos extendidos y mirada serena, es un ícono de la ciudad de Santa Cruz de la Sierra, fue labrado en bronce en La Paz, por el escultor Emiliano Luján y llevado a su destino con recursos recaudados por las damas cruceñas en los primeros años de la década del 60. Algunos registros de la Iglesia católica dan cuenta de que cuando se preparaba el monumento y su base para que ocupe su lugar, muchas personas optaron por orar durante varias jornadas, hasta que la imagen religiosa fue levantada.",
-        "video": ""
+        "audio":"url",
+        "video": "",
+        "image":"https://www.paginasiete.bo/u/fotografias/m/2019/11/19/f638x638-290475_348642_5050.jpg"
     },
     {
+        "id": 5,
+        "latitude":-17.77436240351818,
+        "longitude":-63.1831277793121,
         "title": "Plaza del Estudiante",
         "description": "La Biblioteca Pública Municipal fue inaugurada en mayo de 1997 con aportes de los Reyes de España, Cordecruz y la concluyó la Alcaldía Municipal de Santa Cruz. Esta biblioteca de ladrillo visto fue levantada al centro de la “plazuela del estudiante”, en la que se dispone para el público una colección bibliográfica de 12000 libros de interés general, una biblioteca infantil y una hemeroteca con periódicos nacionales y locales a partir de los años ‘90.  La adquisición de la importante Biblioteca de Hernando Sanabria Fernández, enriquece aún más la disponibilidad de material de consulta sobre el oriente boliviano con 8.000 volúmenes de los siglos XIX y XX; cuyo autor es considerado como uno de los más importantes historiadores y estudiosos cruceños.",
-        "video": ""
+        "audio":"url",
+        "video": "",
+        "image":""
     },
     {
+        "id": 6,
+        "latitude":-17.774773552203964,
+        "longitude":-63.18219528259566,
         "title": "Monumento Mujer cívica cruceña",
         "description": "El 31 de octubre de 1957, un grupo numeroso de mujeres reunidas, decidieron sumarse a las luchas cívicas para exigir el pago de las regalías petroleras y formaron el Comité Cívico Femenino Santa Cruz, bajo el lema de “Lucha, Fe y Solidaridad”. El 7 de noviembre de ese mismo año, más de 100 mujeres del comité, ingresaron en huelga de hambre en el edificio de la Alcaldía Municipal, exigiendo que se cumpla con dichos pagos. Siendo esta la primera huelga de hambre realizada por mujeres en Bolivia. Las luchas cívicas duraron hasta 1959, cuando después de dos años de enfrentamientos y muertes, el gobierno central hizo efectivo este pago. Sin embargo, las/os principales protagonistas de las luchas cívicas tuvieron que salir de Bolivia. Este monumento nos recuerda la valentía de aquellas mujeres cruceñas que defendieron los intereses del pueblo de Santa Cruz demostrando que se puede tener una sociedad más justa, unida y organizada, sin distinción de clases, género, raza o creencias cuando se trata de defender un ideal. ",
-        "video": "https://www.youtube.com/watch?v=swY8gTzB8Mk"
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=swY8gTzB8Mk",
+        "image":""
     },
     {
+        "id": 7,
+        "latitude":-17.777433359416218,
+        "longitude":-63.18114684393941,
         "title": "Parque El Arenal",
         "description": "El Arenal no es un paseo público cualquiera. El Parque y su laguna, hoy enclavados en pleno centro urbano, a solo cinco cuadras de la Plaza Principal, es un retazo de la vieja ciudad lleno de hondas reminiscencias para los cruceños. Según cuentan las crónicas, recopiladas por R. Ferreira, la laguna fue durante el siglo XIX y parte del XX un estanque natural, recolector de aguas pluviales, situado entonces en los límites de la ciudad. Era un lugar de recreo donde los niños acudían a nadar y pescar y las mujeres a lavar ropa. Allí también abrevaban los sedientos bueyes, caballos y mulas que aprovisionaban la ciudad desde las provincias vecinas. En 1958 comenzaron los trabajos para convertir a El Arenal en una de las primeras áreas de esparcimiento de Santa Cruz, con su espejo de agua, su isla y sus jardines, que ha sido recientemente rescata por la Alcaldía Municipal de la expansiva área comercial del cercano mercado Los Pozos, con una moderna obra de embellecimiento del ornato público que ha devuelto la zona al esparcimiento público. ",
-        "video": "https://www.youtube.com/watch?v=gyn4OioPMUo"
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=gyn4OioPMUo",
+        "image":""
     },
     {
+        "id": 8,
+        "latitude":-17.775349174915746,
+        "longitude":-63.1839309768695,
         "title": "Parque lineal Noel kempff Mercado",
         "description": "El reconocido naturalista Prof. Noel Kempff Mercado a finales de los años 60 ideó un plan de arborización urbana para la ciudad de Santa Cruz de la Sierra. En dicho plan se estableció que los anillos circundantes y concéntricos, característica de la joven urbe, deberían ser diseñados de manera paisajística con árboles nativos de la zona. Así que los más de 7 km de diámetro del 1er. Anillo están arborizados con especies como Mara, Toborochi, Gallito, Copernicia Alba, Tajibos, Sirari, Totaí, Cupesí y otros más. Es deber de todos cuidar el parque lineal Prof. Noel Kempff Mercado, por su importancia histórica y natural.",
-        "video": ""
+        "audio":"url",
+        "video": "",
+        "image":""
     },
     {
+        "id": 9,
+        "latitude":-17.784300713300066,
+        "longitude":-63.188828350239014,
         "title": "Monumento a Cañoto",
         "description": "Monumento ubicado en la intersección de las avenidas Landívar y Cañoto, y la calle Ayacucho (sobre el primer anillo de circunvalación). Su autor fue el escultor David Paz Ramos. Fue entregado el 24 de septiembre de 1975. José Manuel Baca nació en Santa Cruz de la Sierra el 10 de diciembre de 1790, en un hogar de artesanos estereros ubicado en el antiguo barrio de Chapare próximo al templo de San Roque. Fue héroe cruceño de la Guerra de la Independencia. Guerrillero y trovador, conocido con el apodo de ‘Cañoto’, participó en varias batallas y guerrillas como las de El Pari y Florida, junto a Ignacio Warnes y José Manuel Mercado. Murió en el caserío de Jitapaqui próximo a Cotoca, el 15 de septiembre de 1854.",
-        "video": "https://www.youtube.com/watch?v=ox19VC8H5nc"
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=ox19VC8H5nc",
+        "image":""
     },
     {
+        "id": 10,
+        "latitude":-17.793284925692216,
+        "longitude":-63.187018427134596,
         "title": "Monumento Andres ibañez",
         "description": "Monumento ubicado en la intersección de las avenidas Irala, Omar Chávez Ortíz, Grigotá y Cañoto (sobre el primer anillo de circunvalación). Su autor fue el escultor David Paz Ramos, siendo gestionado por el Comité Cívico Pro Santa Cruz. Fue entregado el 26 de febrero de 1986.",
-        "video": "https://www.youtube.com/watch?v=5Mc-sSW26_0"
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=5Mc-sSW26_0",
+        "image":""
     },
     {
+        "id": 11,
+        "latitude":-17.792504004183577,
+        "longitude":-63.1818004515612,
         "title": "Museo de Historia Natural Noel Kempff Mercado",
         "description": "El Museo de Historia Natural Noel Kempff Mercado es uno de los centros de investigación básica y aplicada en conservación de la biodiversidad de Bolivia. Forma parte de la Facultad de Ciencias Agrícolas de la Universidad Autónoma Gabriel René Moreno, la institución académica pública más grande de la región.",
-        "video": ""
+        "audio":"url",
+        "video": "",
+        "image":""
     },
     {
+        "id": 12,
+        "latitude":-17.791835466899606,
+        "longitude":-63.17779412837755,
         "title": "Monumento Simon bolivar",
         "description": "Monumento ubicado en la intersección de las avenidas Irala y Las Américas, y la calle La Paz (sobre el primer anillo de circunvalación). Su autor fue el escultor David Paz Ramos, siendo gestionado por la Prefectura del Departamento y la Honorable Alcaldía Municipal. Fue entregado el 24 de abril de 1983, conmemorando el bicentenario del nacimiento del Libertador.",
-        "video": "https://www.youtube.com/watch?v=Ege5M3xB0ZU"
+        "audio":"url",
+        "video": "https://www.youtube.com/watch?v=Ege5M3xB0ZU",
+        "image":""
     },
     {
+        "id": 13,
+        "latitude":-17.80105477991134,
+        "longitude":-63.17578056054535,
         "title": "Aeropuerto el trompillo",
         "description": "El Aeropuerto de El Trompillo es un aeropuerto local de la ciudad de Santa Cruz de la Sierra, Bolivia. Está situado en la parte suroeste de la ciudad rodeado de la mancha urbana, su uso es generalmente para vuelos nacionales. Hasta mediados de los años 1980 fue internacional y desde entonces fue reemplazado por el actual aeropuerto internacional Viru Viru. Después de una serie de mejoras, el 3 de junio de 2014 el aeropuerto recuperó su estatus de aeropuerto internacional convirtiendo a Santa Cruz de la Sierra en la única ciudad de Bolivia con dos aeropuertos internacionales, apto como aeropuerto internacional de reserva y/o apoyo para ocasiones de alta demanda en las que el aeropuerto Viru Viru no pueda abastecer por completo.",
-        "video": ""
+        "audio":"url",
+        "video": "",
+        "image":""
     }
 ]
