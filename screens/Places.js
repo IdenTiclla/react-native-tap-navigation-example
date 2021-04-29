@@ -58,7 +58,7 @@ class Places extends React.Component {
             return (
                 <ScrollView style={styles.places}>
                     {this.state.placesSpanish.map(place => (
-                        <PlaceCard sitio={place}></PlaceCard>
+                        <PlaceCard sitio={place} key={place.id}></PlaceCard>
                     ))}
                 </ScrollView>
             )
@@ -66,7 +66,7 @@ class Places extends React.Component {
             return (
                 <ScrollView style={styles.places}>
                     {this.state.placesEnglish.map(place => (
-                        <PlaceCard sitio={place}></PlaceCard>
+                        <PlaceCard sitio={place} key={place.id}></PlaceCard>
                     ))}
                 </ScrollView>
             )
