@@ -1,7 +1,9 @@
 
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-
+// image
+import { Image } from 'react-native-elements';
+//redux
 import {connect} from 'react-redux'
 
 const styles = StyleSheet.create({
@@ -37,16 +39,22 @@ class Settings extends React.Component {
         if (this.props.language === 'en') {
             return (
                 <View style={styles.container}>
-                    <Text>Settings Screen</Text>
+                    <Text>Please choose a language</Text>
+
+                    <Image
+                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" }}
+                        style={{ width: 200, height: 150 }}
+                        onPress={()=> this.props.changeLanguageToEnglish()}
+                        />
+
                     
 
-                    <TouchableOpacity onPress={()=> this.props.changeLanguageToEnglish()}>
-                            <Text>change language</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity onPress={()=> this.props.changeLanguageToSpanish()}>
-                            <Text>cambiar idioma</Text>
-                    </TouchableOpacity>
+                    <Image
+                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png" }}
+                        style={{ width: 200, height: 150, marginTop:60 }}
+                        
+                        onPress={()=> this.props.changeLanguageToSpanish()}
+                        />
                    
                 </View>
             )    
@@ -55,15 +63,25 @@ class Settings extends React.Component {
         else if (this.props.language === 'esp') {
             return (
                 <View style={styles.container}>
-                    <Text>Pantalla de configuraciones</Text>
+                    <Text>Por favor elija un idioma</Text>
 
-                    <TouchableOpacity onPress={()=> this.props.changeLanguageToEnglish()}>
-                            <Text>change language</Text>
-                    </TouchableOpacity>
+                    <Image
+                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" }}
+                        style={{ width: 200, height: 150 }}
+                        onPress={()=> this.props.changeLanguageToEnglish()}
+                        />
 
-                    <TouchableOpacity onPress={()=> this.props.changeLanguageToSpanish()}>
-                            <Text>cambiar idioma</Text>
-                    </TouchableOpacity>
+                    
+
+                    <Image
+                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png" }}
+                        style={{ width: 200, height: 150, marginTop:60 }}
+                        
+                        onPress={()=> this.props.changeLanguageToSpanish()}
+                        />
+    
+
+
                     
                 </View>
             )    

@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location'
 
-
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -19,7 +18,6 @@ const styles = StyleSheet.create({
 
 
 export default class Map extends React.Component {
-
     constructor(props) {
         super(props)
         
@@ -48,7 +46,6 @@ export default class Map extends React.Component {
 
 
     }
-
     componentDidMount() {
         this.getLocation()
     }
