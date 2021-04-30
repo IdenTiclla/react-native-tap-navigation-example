@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import PlaceCard from '../components/PlaceCard'
 
+// geolib
+import {getDistance, getPreciseDistance} from 'geolib'
+
 //redux
 import {connect} from 'react-redux'
 
@@ -58,7 +61,7 @@ class Places extends React.Component {
             return (
                 <ScrollView style={styles.places}>
                     {this.state.placesSpanish.map(place => (
-                        <PlaceCard sitio={place} key={place.id}></PlaceCard>
+                        <PlaceCard place={place} key={place.id} getPreciseDistance={getPreciseDistance}></PlaceCard>
                     ))}
                 </ScrollView>
             )
@@ -66,7 +69,7 @@ class Places extends React.Component {
             return (
                 <ScrollView style={styles.places}>
                     {this.state.placesEnglish.map(place => (
-                        <PlaceCard sitio={place} key={place.id}></PlaceCard>
+                        <PlaceCard place={place} key={place.id} getPreciseDistance={getPreciseDistance}></PlaceCard>
                     ))}
                 </ScrollView>
             )
