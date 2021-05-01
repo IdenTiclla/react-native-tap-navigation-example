@@ -4,7 +4,8 @@ import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper'; //y
 
 import { View, Alert } from 'react-native'
 
-
+// geolib
+import {getPreciseDistance} from 'geolib'
 
 export default class PlaceCard extends React.Component {
     constructor(props) {
@@ -23,8 +24,8 @@ export default class PlaceCard extends React.Component {
                         
                         <Button 
                             onPress={()=>console.log('hiciste click en el ok')}>
-                                Distancia{this.props.getPreciseDistance({ latitude: -17.78686, longitude: -63.1960 },
-                                { latitude: this.props.place.latitude, longitude: this.props.place.longitude })}
+                                Distancia: {getPreciseDistance({ latitude: this.props.latitude, longitude: this.props.longitude },
+                                { latitude: this.props.place.latitude, longitude: this.props.place.longitude })} 
                                 Metros
                             </Button>
                     </Card.Actions>

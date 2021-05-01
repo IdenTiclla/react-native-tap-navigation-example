@@ -23,6 +23,7 @@ export default class Map extends React.Component {
         
         this.state = {
             location: null,
+            region:null,
             errorMessage: '',
             userLocation : {
 
@@ -42,16 +43,27 @@ export default class Map extends React.Component {
 
         }
         let location = await Location.getCurrentPositionAsync({})
-        this.setState({location: location})
+        
+        const region = {
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421
+        }
+
+        this.setState({location: location, region:region})
 
 
     }
-    componentDidMount() {
+    componentDidMount() {   
         this.getLocation()
     }
 
 
     render() {
+        //console.log(this.state.location)
+        //console.log(this.state.region)
+        
         /*
         console.log(JSON.stringify(this.state.location))
         console.log('device connected')
@@ -65,12 +77,7 @@ export default class Map extends React.Component {
             <View style={styles.container}>
                 <MapView
                     style={styles.map}
-                    initialRegion={{
-                        latitude: -17.78686,
-                        longitude: -63.1960,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
-                    }}
+                    initialRegion={this.state.region}
                     
                     showsUserLocation={true}
                     followsUserLocation={true}

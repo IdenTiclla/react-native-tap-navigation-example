@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import PlaceCard from '../components/PlaceCard'
+//location
+import * as Location from 'expo-location'
 
 // geolib
-import {getDistance, getPreciseDistance} from 'geolib'
+import {getPreciseDistance} from 'geolib'
 
 //redux
 import {connect} from 'react-redux'
@@ -40,41 +42,68 @@ class Places extends React.Component {
         super(props)
         this.state = {
             placesSpanish: [],
-            placesEnglish: []
+            placesEnglish: [],
+            errorMessage: '',
+            location: null,
         }
     }
-    componentDidMount() {
-        this.setState({
-            placesSpanish: es,
-        })
 
+    _getLocation = async () => {
+        let { status } = await Location.requestPermissionsAsync();
+        if (status !== 'granted') {
+            this.setState({
+                errorMessage: 'Permissions not granted'
+            })
+            return;
+        }
+        let location = await Location.getCurrentPositionAsync({})
+        console.log(location.coords.latitude)
+        const latitude = location.coords.latitude
+        const longitude = location.coords.longitude
         this.setState({
-            placesEnglish: en,
+            location: location,
+            placesSpanish: es.sort(function(a,b){return getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:a.latitude, longitude:a.longitude}) - getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:b.latitude, longitude:b.longitude})}),
+            placesEnglish: en.sort(function(a,b){return getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:a.latitude, longitude:a.longitude}) - getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:b.latitude, longitude:b.longitude})})
         })
+    }
+
+    componentDidMount() {
+        this._getLocation()
+           
 
     }
+
     // <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{person:{name:'iden', lastname:'ticlla'}})}></PlaceCard>
     render() {
         console.log('places renderizado')
-        if (this.props.language === "esp") {
-            
+        
+        if (!this.state.location) {
             return (
-                <ScrollView style={styles.places}>
-                    {this.state.placesSpanish.map(place => (
-                        <PlaceCard place={place} key={place.id} getPreciseDistance={getPreciseDistance}></PlaceCard>
-                    ))}
-                </ScrollView>
-            )
-        } else if (this.props.language==="en") {
-            return (
-                <ScrollView style={styles.places}>
-                    {this.state.placesEnglish.map(place => (
-                        <PlaceCard place={place} key={place.id} getPreciseDistance={getPreciseDistance}></PlaceCard>
-                    ))}
-                </ScrollView>
+                <View></View>
             )
         }
-            
+        else {
+            const latitude = this.state.location.coords.latitude
+            const longitude = this.state.location.coords.longitude
+            if (this.props.language === "esp") {
+                
+                return (
+                    <ScrollView style={styles.places}>
+                        {this.state.placesSpanish.map(place => (
+                            <PlaceCard place={place} key={place.id} latitude={latitude} longitude={longitude}></PlaceCard>
+                        ))}
+                    </ScrollView>
+                )
+            } else if (this.props.language==="en") {
+                return (
+                    <ScrollView style={styles.places}>
+                        {this.state.placesEnglish.map(place => (
+                            <PlaceCard place={place} key={place.id} latitude={latitude} longitude={longitude}></PlaceCard>
+                        ))}
+                    </ScrollView>
+                )
+            }
+        }
         
         return (
             <ScrollView style={styles.places}>
