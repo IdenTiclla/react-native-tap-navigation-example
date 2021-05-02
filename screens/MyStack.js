@@ -32,7 +32,10 @@ class App extends React.Component {
                 <Stack.Screen 
                     name="PlaceInfo"
                     component={PlaceInfo} 
-                    options={{title:this.props.language==="esp"?"Informacion del lugar":"Place Information"}}
+                    options={{
+                        title:this.props.language==="esp"?"Informacion del lugar":"Place Information"
+                        
+                    }}
                     />
             </Stack.Navigator>
         )

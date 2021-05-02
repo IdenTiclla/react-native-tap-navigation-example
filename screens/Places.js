@@ -90,7 +90,13 @@ class Places extends React.Component {
                 return (
                     <ScrollView style={styles.places}>
                         {this.state.placesSpanish.map(place => (
-                            <PlaceCard place={place} key={place.id} latitude={latitude} longitude={longitude}></PlaceCard>
+                            <PlaceCard 
+                                place={place}
+                                key={place.id}
+                                latitude={latitude}
+                                longitude={longitude}
+                                onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{place: place})}
+                                />
                         ))}
                     </ScrollView>
                 )
@@ -98,7 +104,13 @@ class Places extends React.Component {
                 return (
                     <ScrollView style={styles.places}>
                         {this.state.placesEnglish.map(place => (
-                            <PlaceCard place={place} key={place.id} latitude={latitude} longitude={longitude}></PlaceCard>
+                            <PlaceCard 
+                                place={place}
+                                key={place.id}
+                                latitude={latitude}
+                                longitude={longitude}
+                                onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{place: place})}
+                                />
                         ))}
                     </ScrollView>
                 )

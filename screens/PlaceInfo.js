@@ -10,13 +10,14 @@ export default class PlaceInfo extends React.Component {
         const { navigation } = this.props;
         console.log(this.props)
         console.log('-------')
-        const  obj  = this.props.route.params.person
-        console.log(typeof(obj))
+        const  {title, description}  = this.props.route.params.place
+        //console.log(typeof(obj))
         return (
             <View>
-                <Text>Places info text</Text>
-                <Text>{this.props.route.params.person.name}</Text>
-                <Text>{this.props.route.params.person.lastname}</Text>
+                
+                <Text>{title}</Text>
+                <Text>-</Text>
+                <Text>{description}</Text>
             </View>
         )
     }
