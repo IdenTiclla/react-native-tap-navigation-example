@@ -19,7 +19,7 @@ export default class PlaceCard extends React.Component {
                         <Title>{this.props.place.title}</Title>
                         <Paragraph>Card content</Paragraph>
                     </Card.Content>
-                    <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+                    <Card.Cover source={{ uri: this.props.place.image }} />
                     <Card.Actions>
                         
                         <Button 
