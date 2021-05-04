@@ -3,6 +3,24 @@ import { StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location'
 
+//Lists 
+import en from '../src/en.json'
+import es from '../src/es.json'
+
+//redux
+import {connect} from 'react-redux'
+
+// Image
+import { Image } from 'react-native-elements'
+
+
+
+function mapStateToProps(state)  {
+    return {
+        language: state.language
+    }
+}
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -17,7 +35,7 @@ const styles = StyleSheet.create({
   });
 
 
-export default class Map extends React.Component {
+class Map extends React.Component {
     constructor(props) {
         super(props)
         
@@ -27,7 +45,9 @@ export default class Map extends React.Component {
             errorMessage: '',
             userLocation : {
 
-            }
+            },
+            placesSpanish: es,
+            placesEnglish: en,
         }
 
         this.getLocation = this.getLocation.bind(this)
@@ -73,17 +93,62 @@ export default class Map extends React.Component {
         
         console.log(typeof(this.state.loca))
         */
-        return (
-            <View style={styles.container}>
-                <MapView
-                    style={styles.map}
-                    initialRegion={this.state.region}
-                    
-                    showsUserLocation={true}
-                    followsUserLocation={true}
-                >
-                </MapView>
-            </View>
-        )
+        if (!this.state.location) {
+            return (
+                <View></View>
+            )
+        }
+        else {
+            if (this.props.language === "esp") {
+                return (
+                    <View style={styles.container}>
+                        <MapView
+                            style={styles.map}
+                            initialRegion={this.state.region}
+                            showsUserLocation={true}
+                            followsUserLocation={true}
+                        >
+                        {this.state.placesSpanish.map(place => (
+                            <Marker
+                                key={place.id}
+                                coordinate={{
+                                    latitude: place.latitude,
+                                    longitude: place.longitude
+                                }}
+                                title={place.title}
+                            />
+                        ))}
+
+                        </MapView>
+                    </View>
+                )
+            } else if (this.props.language==="en") {
+                return (
+                    <View style={styles.container}>
+                        <MapView
+                            style={styles.map}
+                            initialRegion={this.state.region}
+                            showsUserLocation={true}
+                            followsUserLocation={true}
+                        >
+                        {this.state.placesEnglish.map(place => (
+                            <Marker
+                                key={place.id}
+                                coordinate={{
+                                    latitude: place.latitude,
+                                    longitude: place.longitude
+                                }}
+                                title={place.title}
+                            />
+                        ))}
+
+                        </MapView>
+                    </View>
+                )
+            }
+        }
+
+        
     }
 }
+export default connect(mapStateToProps)(Map)
