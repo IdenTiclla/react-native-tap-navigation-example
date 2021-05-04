@@ -67,7 +67,7 @@ export default class App extends React.Component {
         return (
             <Provider store={store}>
                 <NavigationContainer>
-                    <Tab.Navigator>
+                    <Tab.Navigator initialRouteName="Places">
                         <Tab.Screen 
                             name="Map" 
                             component={Map} 

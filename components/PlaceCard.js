@@ -26,7 +26,7 @@ export default class PlaceCard extends React.Component {
                             onPress={()=>console.log('hiciste click en el ok')}>
                                 Distancia: {getPreciseDistance({ latitude: this.props.latitude, longitude: this.props.longitude },
                                 { latitude: this.props.place.latitude, longitude: this.props.place.longitude })} 
-                                Metros
+                                M
                             </Button>
                     </Card.Actions>
                 </Card>
