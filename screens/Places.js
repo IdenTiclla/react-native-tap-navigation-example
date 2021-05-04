@@ -49,6 +49,7 @@ class Places extends React.Component {
     }
 
     _getLocation = async () => {
+        console.log('get location executed')
         let { status } = await Location.requestPermissionsAsync();
         if (status !== 'granted') {
             this.setState({
@@ -56,8 +57,8 @@ class Places extends React.Component {
             })
             return;
         }
-        let location = await Location.getCurrentPositionAsync({})
-        console.log(location.coords.latitude)
+        let location = await Location.getCurrentPositionAsync({accuracy:6})
+        console.log(location.coords.latitude + " , " + location.coords.longitude)
         const latitude = location.coords.latitude
         const longitude = location.coords.longitude
         this.setState({
@@ -69,8 +70,7 @@ class Places extends React.Component {
 
     componentDidMount() {
         this._getLocation()
-           
-
+        setInterval(()=> this._getLocation(), 20000)
     }
 
     // <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{person:{name:'iden', lastname:'ticlla'}})}></PlaceCard>
