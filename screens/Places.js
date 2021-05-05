@@ -117,14 +117,7 @@ class Places extends React.Component {
             }
         }
         
-        return (
-            <ScrollView style={styles.places}>
-                <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{person:{name:'iden', lastname:'ticlla'}})}></PlaceCard>
-                <PlaceCard></PlaceCard>
-                <PlaceCard></PlaceCard>
-                <PlaceCard></PlaceCard>
-            </ScrollView>
-        )
+        
     }
 }
 export default connect(mapStateToProps)(Places)
