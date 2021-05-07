@@ -17,7 +17,7 @@ export default class PlaceCard extends React.Component {
                 <Card onPress={this.props.onPressCard}>
                     <Card.Content>
                         <Title>{this.props.place.title}</Title>
-                        <Paragraph>Card content</Paragraph>
+                        
                     </Card.Content>
                     <Card.Cover source={{ uri: this.props.place.image }} />
                     <Card.Actions>

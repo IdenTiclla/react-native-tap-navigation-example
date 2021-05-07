@@ -54,7 +54,7 @@ class Map extends React.Component {
     }
 
     getLocation = async () => {
-        let { status } = await Location.requestPermissionsAsync();
+        let { status } = await Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {
             this.setState({
                 errorMessage: 'Permissions not granted'

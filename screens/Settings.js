@@ -39,7 +39,7 @@ class Settings extends React.Component {
         if (this.props.language === 'en') {
             return (
                 <View style={styles.container}>
-                    <Text>Please choose a language</Text>
+                    <Text style={{fontWeight:'bold', fontSize:30}}>Please choose a language</Text>
 
                     <Image
                         source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" }}
@@ -63,7 +63,7 @@ class Settings extends React.Component {
         else if (this.props.language === 'esp') {
             return (
                 <View style={styles.container}>
-                    <Text>Por favor elija un idioma</Text>
+                    <Text style={{fontWeight:'bold', fontSize:30}}>Por favor elija un idioma</Text>
 
                     <Image
                         source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" }}

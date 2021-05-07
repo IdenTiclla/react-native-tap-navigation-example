@@ -50,7 +50,7 @@ class Places extends React.Component {
 
     _getLocation = async () => {
         console.log('get location executed')
-        let { status } = await Location.requestPermissionsAsync();
+        let { status } = await Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {
             this.setState({
                 errorMessage: 'Permissions not granted'
