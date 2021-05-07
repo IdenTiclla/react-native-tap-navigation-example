@@ -11,12 +11,15 @@ Instructions for setting up your development workstation and phone.
 * npm
 * yarn
 * expo
+    ```bash
+    npm install --global expo-cli
+    ```
 * android studio or expo app
 
+
+
 # install dependencies:
-```bash
-npm install --global expo-cli
-```
+
 
 ```bash
 yarn install 
@@ -27,5 +30,11 @@ npm install
 ```
 
 # Running the project
-expo start
-yarn start
+```bash
+    expo start
+```
+
+```bash
+    yarn start
+```
+
