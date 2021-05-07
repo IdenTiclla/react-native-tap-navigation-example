@@ -99,6 +99,8 @@ class Places extends React.Component {
                                 key={place.id}
                                 latitude={latitude}
                                 longitude={longitude}
+                                txt="Distancia"
+                                unit="Metros"
                                 onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{place: place})}
                                 />
                         ))}
@@ -113,6 +115,8 @@ class Places extends React.Component {
                                 key={place.id}
                                 latitude={latitude}
                                 longitude={longitude}
+                                txt="Distance"
+                                unit="Meters"
                                 onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{place: place})}
                                 />
                         ))}
@@ -128,6 +132,8 @@ class Places extends React.Component {
                                 key={place.id}
                                 latitude={latitude}
                                 longitude={longitude}
+                                txt="Entfernung"
+                                unit="Meter"
                                 onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{place: place})}
                                 />
                         ))}

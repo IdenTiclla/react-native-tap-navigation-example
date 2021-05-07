@@ -22,12 +22,11 @@ export default class PlaceCard extends React.Component {
                     <Card.Cover source={{ uri: this.props.place.image }} />
                     <Card.Actions>
                         
-                        <Button 
-                            onPress={()=>console.log('hiciste click en el ok')}>
-                                Distancia: {getPreciseDistance({ latitude: this.props.latitude, longitude: this.props.longitude },
-                                { latitude: this.props.place.latitude, longitude: this.props.place.longitude })} 
-                                M
-                            </Button>
+                        <Button>
+                            {this.props.txt}: {getPreciseDistance({ latitude: this.props.latitude, longitude: this.props.longitude },
+                            { latitude: this.props.place.latitude, longitude: this.props.place.longitude })} 
+                            -{this.props.unit}
+                        </Button>
                     </Card.Actions>
                 </Card>
             </View>
