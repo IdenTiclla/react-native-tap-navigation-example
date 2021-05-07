@@ -29,6 +29,8 @@ function mapDispatchToProps(dispatch) {
     return {
         changeLanguageToEnglish: () => dispatch({type: 'CHANGE_ENGLISH'}),
         changeLanguageToSpanish: () => dispatch({type: 'CHANGE_SPANISH'}),
+        changeLanguageToGerman: () => dispatch({type: 'CHANGE_GERMAN'}),
+
 
     }
 }
@@ -55,6 +57,13 @@ class Settings extends React.Component {
                         
                         onPress={()=> this.props.changeLanguageToSpanish()}
                         />
+
+                    <Image
+                        source={{ uri: "https://image.freepik.com/foto-gratis/bandera-tela-nacional-alemana_113767-1216.jpg" }}
+                        style={{ width: 200, height: 150, marginTop:60 }}
+                        
+                        onPress={()=> this.props.changeLanguageToGerman()}
+                        />
                    
                 </View>
             )    
@@ -79,12 +88,48 @@ class Settings extends React.Component {
                         
                         onPress={()=> this.props.changeLanguageToSpanish()}
                         />
-    
 
 
-                    
+                    <Image
+                        source={{ uri: "https://image.freepik.com/foto-gratis/bandera-tela-nacional-alemana_113767-1216.jpg" }}
+                        style={{ width: 200, height: 150, marginTop:60 }}
+                        
+                        onPress={()=> this.props.changeLanguageToGerman()}
+                        />
+
                 </View>
             )    
+        }
+        else if (this.props.language === 'de') {
+            return (
+                <View style={styles.container}>
+                    <Text style={{fontWeight:'bold', fontSize:28}}>Bitte wählen Sie eine Sprache</Text>
+
+                    <Image
+                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" }}
+                        style={{ width: 200, height: 150 }}
+                        onPress={()=> this.props.changeLanguageToEnglish()}
+                        />
+
+                    
+
+                    <Image
+                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png" }}
+                        style={{ width: 200, height: 150, marginTop:60 }}
+                        
+                        onPress={()=> this.props.changeLanguageToSpanish()}
+                        />
+
+
+                    <Image
+                        source={{ uri: "https://image.freepik.com/foto-gratis/bandera-tela-nacional-alemana_113767-1216.jpg" }}
+                        style={{ width: 200, height: 150, marginTop:60 }}
+                        
+                        onPress={()=> this.props.changeLanguageToGerman()}
+                        />
+
+                </View>
+            )
         }
         
     }

@@ -14,6 +14,7 @@ import {connect} from 'react-redux'
 
 import en from '../src/en.json'
 import es from '../src/es.json'
+import de from '../src/de.json'
 
 function mapStateToProps(state)  {
     return {
@@ -43,6 +44,7 @@ class Places extends React.Component {
         this.state = {
             placesSpanish: [],
             placesEnglish: [],
+            placesGerman:[],
             errorMessage: '',
             location: null,
         }
@@ -64,7 +66,9 @@ class Places extends React.Component {
         this.setState({
             location: location,
             placesSpanish: es.sort(function(a,b){return getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:a.latitude, longitude:a.longitude}) - getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:b.latitude, longitude:b.longitude})}),
-            placesEnglish: en.sort(function(a,b){return getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:a.latitude, longitude:a.longitude}) - getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:b.latitude, longitude:b.longitude})})
+            placesEnglish: en.sort(function(a,b){return getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:a.latitude, longitude:a.longitude}) - getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:b.latitude, longitude:b.longitude})}),
+            placesGerman: de.sort(function(a,b){return getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:a.latitude, longitude:a.longitude}) - getPreciseDistance({latitude:latitude, longitude:longitude},{latitude:b.latitude, longitude:b.longitude})})
+            
         })
     }
 
@@ -104,6 +108,21 @@ class Places extends React.Component {
                 return (
                     <ScrollView style={styles.places}>
                         {this.state.placesEnglish.map(place => (
+                            <PlaceCard 
+                                place={place}
+                                key={place.id}
+                                latitude={latitude}
+                                longitude={longitude}
+                                onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{place: place})}
+                                />
+                        ))}
+                    </ScrollView>
+                )
+            }
+            else if (this.props.language === "de"){
+                return (
+                    <ScrollView style={styles.places}>
+                        {this.state.placesGerman.map(place => (
                             <PlaceCard 
                                 place={place}
                                 key={place.id}

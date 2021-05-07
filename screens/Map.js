@@ -6,7 +6,7 @@ import * as Location from 'expo-location'
 //Lists 
 import en from '../src/en.json'
 import es from '../src/es.json'
-
+import de from '../src/de.json'
 //redux
 import {connect} from 'react-redux'
 
@@ -48,6 +48,7 @@ class Map extends React.Component {
             },
             placesSpanish: es,
             placesEnglish: en,
+            placesGerman: de,
         }
 
         this.getLocation = this.getLocation.bind(this)
@@ -81,18 +82,7 @@ class Map extends React.Component {
 
 
     render() {
-        //console.log(this.state.location)
-        //console.log(this.state.region)
         
-        /*
-        console.log(JSON.stringify(this.state.location))
-        console.log('device connected')
-        console.log('--------------------')
-        console.log('mensage de error' + this.state.errorMessage)
-        console.log(this.state.location)
-        
-        console.log(typeof(this.state.loca))
-        */
         if (!this.state.location) {
             return (
                 <View></View>
@@ -132,6 +122,53 @@ class Map extends React.Component {
                             followsUserLocation={true}
                         >
                         {this.state.placesEnglish.map(place => (
+                            <Marker
+                                key={place.id}
+                                coordinate={{
+                                    latitude: place.latitude,
+                                    longitude: place.longitude
+                                }}
+                                title={place.title}
+                            />
+                        ))}
+
+                        </MapView>
+                    </View>
+                )
+            } else if (this.props.language==="en") {
+                return (
+                    <View style={styles.container}>
+                        <MapView
+                            style={styles.map}
+                            initialRegion={this.state.region}
+                            showsUserLocation={true}
+                            followsUserLocation={true}
+                        >
+                        {this.state.placesEnglish.map(place => (
+                            <Marker
+                                key={place.id}
+                                coordinate={{
+                                    latitude: place.latitude,
+                                    longitude: place.longitude
+                                }}
+                                title={place.title}
+                            />
+                        ))}
+
+                        </MapView>
+                    </View>
+                )
+            }
+            else if (this.props.language==="de") {
+                return (
+                    <View style={styles.container}>
+                        <MapView
+                            style={styles.map}
+                            initialRegion={this.state.region}
+                            showsUserLocation={true}
+                            followsUserLocation={true}
+                        >
+                        {this.state.placesGerman.map(place => (
                             <Marker
                                 key={place.id}
                                 coordinate={{

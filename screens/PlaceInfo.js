@@ -26,7 +26,7 @@ class PlaceInfo extends React.Component {
     speak = (txt) => {
         const thingToSay = txt
         Speech.speak(thingToSay, {
-            language:this.props.language==="esp" ? 'es-ES': 'en-US'
+            language:this.props.language==="esp" ? 'es-ES': this.props.language==="en" ? 'en-US': 'de-DE'
         })
     }
 

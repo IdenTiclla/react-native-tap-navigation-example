@@ -27,13 +27,19 @@ class App extends React.Component {
                 <Stack.Screen 
                     name="Places"
                     component={Places}
-                    options={{title:this.props.language==="esp"?"Lugares":"Places"}}
+                    options={{
+                        title:this.props.language == "esp" ? 'lugares' :
+                        this.props.language == "en" ? 'places' :
+                        'setzt'
+                    }}
                     />
                 <Stack.Screen 
                     name="PlaceInfo"
                     component={PlaceInfo} 
                     options={{
-                        title:this.props.language==="esp"?"Informacion del lugar":"Place Information"
+                        title:this.props.language == "esp" ? 'Informacion del lugar' :
+                        this.props.language == "en" ? 'Place information' :
+                        'Ortsinformationen'
                         
                     }}
                     />

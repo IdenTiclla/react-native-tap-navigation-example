@@ -55,6 +55,8 @@ const reducer = (state=initialState, action) => {
             return {counter: state.counter, language: 'en'}
         case 'CHANGE_SPANISH':
             return {counter: state.counter, language: 'esp'}
+        case 'CHANGE_GERMAN':
+            return {counter: state.counter, language: 'de'}
     }
     return state
 }
