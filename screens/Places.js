@@ -51,7 +51,7 @@ class Places extends React.Component {
     }
 
     _getLocation = async () => {
-        console.log('get location executed')
+        //console.log('get location executed')
         let { status } = await Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {
             this.setState({
@@ -74,12 +74,12 @@ class Places extends React.Component {
 
     componentDidMount() {
         this._getLocation()
-        setInterval(()=> this._getLocation(), 20000)
+        setInterval(()=> this._getLocation(), 10000)
     }
 
     // <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{person:{name:'iden', lastname:'ticlla'}})}></PlaceCard>
     render() {
-        console.log('places renderizado')
+        //console.log('places renderizado')
         
         if (!this.state.location) {
             return (

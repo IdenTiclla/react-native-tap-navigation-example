@@ -2,24 +2,24 @@ import * as React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
 import { Video, AVPlaybackStatus } from 'expo-av';
 
-export default function MyVideoComponent() {
+export default function MyVideoComponent(props) {
     const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  return (
-    <View style={styles.container}>
-      <Video
-        ref={video}
-        style={styles.video}
-        source={{
-          uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-        }}
-        useNativeControls
-        resizeMode="contain"
-        isLooping
-        onPlaybackStatusUpdate={status => setStatus(() => status)}
-      />
-    </View>
-  );
+    const [status, setStatus] = React.useState({});
+    return (
+        <View style={styles.container}>
+            <Video
+                ref={video}
+                style={styles.video}
+                source={{
+                uri: props.uri,
+                }}
+                useNativeControls
+                resizeMode="contain"
+                isLooping
+                onPlaybackStatusUpdate={status => setStatus(() => status)}
+            />
+        </View>
+    )
   }
   
   const styles = StyleSheet.create({

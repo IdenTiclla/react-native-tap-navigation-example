@@ -11,7 +11,9 @@ import * as Speech from 'expo-speech'
 //redux
 import {connect} from 'react-redux'
 
+// video componente
 
+import MyVideoComponent from '../components/MyVideoComponent'
 
 function mapStateToProps(state)  {
     return {
@@ -34,7 +36,7 @@ class PlaceInfo extends React.Component {
         const { navigation } = this.props;
         console.log(this.props)
         console.log('-------')
-        const  {title, description, image}  = this.props.route.params.place
+        const  {title, description, image, video}  = this.props.route.params.place
         //console.log(typeof(obj))
         return (
             <ScrollView>
@@ -42,6 +44,8 @@ class PlaceInfo extends React.Component {
                 <Text>{title}</Text>
                 <Text>-</Text>
                 <Text>{description}</Text>
+
+                <MyVideoComponent uri={video}/>
 
                 <Image
                         source={{ uri: "https://i.ytimg.com/vi/OZdIbJZdSZw/maxresdefault.jpg" }}

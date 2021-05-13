@@ -22,6 +22,7 @@ import MyStack from './screens/MyStack'
 // redux
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
+import Info from './screens/Info';
 
 
 
@@ -99,6 +100,18 @@ export default class App extends React.Component {
                                     </View>
                                 ),
                                 
+                            }}
+                            />
+                        <Tab.Screen 
+                            name="Info"
+                            component={Info}
+                            options={{
+                                tabBarLabel:"",
+                                tabBarIcon: ({ tintColor}) => (
+                                    <View>
+                                        <Icon style={[{color: tintColor}]} size={25} name={'information-circle-outline'}></Icon>
+                                    </View>
+                                ),
                             }}
                             />
                         <Tab.Screen 
