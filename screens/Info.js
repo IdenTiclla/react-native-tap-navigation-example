@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 //redux
 import {connect} from 'react-redux'
@@ -19,15 +19,22 @@ import de from '../src/de.json'
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+      flexDirection: 'column'
     },
-    map: {
-      width: 400,
-      height: 810,
-    },
-  });
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center"
+      },
+    text: {
+        color: "white",
+        fontSize: 42,
+        fontWeight: "bold",
+        textAlign: "center",
+        backgroundColor: "#000000a0"
+    }
+    
+  })
 
 function mapStateToProps(state)  {
     return {
@@ -50,7 +57,7 @@ class Info extends React.Component {
     }
 
     _getLocation = async () => {
-        console.log('get location executed')
+        //console.log('get location executed')
         let { status } = await Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {
             this.setState({
@@ -59,7 +66,7 @@ class Info extends React.Component {
             return;
         }
         let location = await Location.getCurrentPositionAsync({accuracy:6})
-        console.log(location.coords.latitude + " , " + location.coords.longitude)
+        //console.log(location.coords.latitude + " , " + location.coords.longitude)
         const latitude = location.coords.latitude
         const longitude = location.coords.longitude
         this.setState({
@@ -99,9 +106,11 @@ class Info extends React.Component {
                     // caso contrario mostramos la distancia hacia el punto mas cercano
                     return (
                         <View style={styles.container}>
-                            <Text>Proximo lugar: {this.state.firstPlaceSpanish.title}</Text>
-                            <Text>Distancia:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
-                                { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude })}</Text>
+                            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/11/b4/8f/11b48f26b2fcfcf77cbd8017a6dd5215.jpg'}} style={styles.image}>
+                                <Text style={styles.text}>Proximo lugar: {this.state.firstPlaceSpanish.title}</Text>
+                                <Text style={styles.text}>Distancia:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
+                                    { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude })}</Text> 
+                            </ImageBackground>
                         </View>
                     )
                 }
@@ -123,9 +132,12 @@ class Info extends React.Component {
                     // caso contrario mostramos la distancia hacia el punto mas cercano
                     return (
                         <View style={styles.container}>
-                            <Text>Next place: {this.state.firstPlaceEnglish.title}</Text>
-                            <Text>Distance:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
-                                { latitude: this.state.firstPlaceEnglish.latitude, longitude: this.state.firstPlaceEnglish.longitude })}</Text>
+                            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/11/b4/8f/11b48f26b2fcfcf77cbd8017a6dd5215.jpg'}} style={styles.image}>
+                                <Text style={styles.text}>Next place: {this.state.firstPlaceEnglish.title}</Text>
+                                <Text style={styles.text}>Distance:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
+                                { latitude: this.state.firstPlaceEnglish.latitude, longitude: this.state.firstPlaceEnglish.longitude })}</Text>    
+                            </ImageBackground>
+                            
                         </View>
                     )
                 }
@@ -146,9 +158,11 @@ class Info extends React.Component {
                     // caso contrario mostramos la distancia hacia el punto mas cercano
                     return (
                         <View style={styles.container}>
-                            <Text>Nächster Platz: {this.state.firstPlaceGerman.title}</Text>
-                            <Text>Entfernung:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
+                            <ImageBackground source={{uri: 'https://i.pinimg.com/originals/11/b4/8f/11b48f26b2fcfcf77cbd8017a6dd5215.jpg'}} style={styles.image}>
+                                <Text style={styles.text}>Nächster Platz: {this.state.firstPlaceGerman.title}</Text>
+                                <Text style={styles.text}>Entfernung:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
                                 { latitude: this.state.firstPlaceGerman.latitude, longitude: this.state.firstPlaceGerman.longitude })}</Text>
+                            </ImageBackground>
                         </View>
                     )
                 }
