@@ -34,8 +34,8 @@ class PlaceInfo extends React.Component {
 
     render() {
         const { navigation } = this.props;
-        console.log(this.props)
-        console.log('-------')
+        //console.log(this.props)
+        //console.log('-------')
         const  {title, description, image, video}  = this.props.route.params.place
         //console.log(typeof(obj))
         return (

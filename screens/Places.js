@@ -60,7 +60,7 @@ class Places extends React.Component {
             return;
         }
         let location = await Location.getCurrentPositionAsync({accuracy:6})
-        console.log(location.coords.latitude + " , " + location.coords.longitude)
+        //console.log(location.coords.latitude + " , " + location.coords.longitude)
         const latitude = location.coords.latitude
         const longitude = location.coords.longitude
         this.setState({
