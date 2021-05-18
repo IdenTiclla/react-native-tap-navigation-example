@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
 
 //redux
 import {connect} from 'react-redux'
@@ -11,6 +11,8 @@ import * as Location from 'expo-location'
 // geolib
 import {getPreciseDistance} from 'geolib'
 
+// video component
+import MyVideoComponent from '../components/MyVideoComponent'
 
 import en from '../src/en.json'
 import es from '../src/es.json'
@@ -32,7 +34,14 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         backgroundColor: "#000000a0"
-    }
+    },
+    info: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop:80
+    },
     
   })
 
@@ -95,11 +104,13 @@ class Info extends React.Component {
                 if (getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
                             { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude }) < 500) {
                     return (
-                        <View style={styles.container}>
-                            <Text>{this.state.firstPlaceSpanish.title}</Text>
-                            <Text>{this.state.firstPlaceSpanish.description}</Text>
-                        
-                        </View>
+                        <ScrollView>
+                            <View style={styles.info}>
+                                <Text style={{fontSize:35}}>{this.state.firstPlaceSpanish.title}</Text>
+                                <Text style={{fontSize:20}}>{this.state.firstPlaceSpanish.description}</Text>
+                                <MyVideoComponent uri={this.state.firstPlaceSpanish.video}/>
+                            </View>
+                        </ScrollView>
                     )
                 }
                 else {
@@ -109,7 +120,7 @@ class Info extends React.Component {
                             <ImageBackground source={{uri: 'https://i.pinimg.com/originals/11/b4/8f/11b48f26b2fcfcf77cbd8017a6dd5215.jpg'}} style={styles.image}>
                                 <Text style={styles.text}>Proximo lugar: {this.state.firstPlaceSpanish.title}</Text>
                                 <Text style={styles.text}>Distancia:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
-                                    { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude })}</Text> 
+                                    { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude })} - Metros</Text> 
                             </ImageBackground>
                         </View>
                     )
@@ -121,11 +132,13 @@ class Info extends React.Component {
                 if (getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
                     { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude }) < 500) {
                     return (
-                        <View style={styles.container}>
-                            <Text>{this.state.firstPlaceEnglish.title}</Text>
-                            <Text>{this.state.firstPlaceEnglish.description}</Text>
-                        
-                        </View>
+                        <ScrollView>
+                            <View style={styles.info}>
+                                <Text style={{fontSize:35}}>{this.state.firstPlaceEnglish.title}</Text>
+                                <Text style={{fontSize:20}}>{this.state.firstPlaceEnglish.description}</Text>
+                                <MyVideoComponent uri={this.state.firstPlaceEnglish.video}/>
+                            </View>
+                        </ScrollView>
                     )
                 }
                 else {
@@ -135,7 +148,7 @@ class Info extends React.Component {
                             <ImageBackground source={{uri: 'https://i.pinimg.com/originals/11/b4/8f/11b48f26b2fcfcf77cbd8017a6dd5215.jpg'}} style={styles.image}>
                                 <Text style={styles.text}>Next place: {this.state.firstPlaceEnglish.title}</Text>
                                 <Text style={styles.text}>Distance:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
-                                { latitude: this.state.firstPlaceEnglish.latitude, longitude: this.state.firstPlaceEnglish.longitude })}</Text>    
+                                { latitude: this.state.firstPlaceEnglish.latitude, longitude: this.state.firstPlaceEnglish.longitude })} - Meters</Text>    
                             </ImageBackground>
                             
                         </View>
@@ -147,11 +160,13 @@ class Info extends React.Component {
                 if (getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
                     { latitude: this.state.firstPlaceSpanish.latitude, longitude: this.state.firstPlaceSpanish.longitude }) < 500) {
                     return (
-                        <View style={styles.container}>
-                            <Text>{this.state.firstPlaceGerman.title}</Text>
-                            <Text>{this.state.firstPlaceGerman.description}</Text>
-                        
-                        </View>
+                        <ScrollView>
+                            <View style={styles.info}>
+                                <Text style={{fontSize:35}}>{this.state.firstPlaceGerman.title}</Text>
+                                <Text style={{fontSize:20}}>{this.state.firstPlaceGerman.description}</Text>
+                                <MyVideoComponent uri={this.state.firstPlaceGerman.video}/>
+                            </View>
+                        </ScrollView>
                     )
                 }
                 else {
@@ -161,7 +176,7 @@ class Info extends React.Component {
                             <ImageBackground source={{uri: 'https://i.pinimg.com/originals/11/b4/8f/11b48f26b2fcfcf77cbd8017a6dd5215.jpg'}} style={styles.image}>
                                 <Text style={styles.text}>Nächster Platz: {this.state.firstPlaceGerman.title}</Text>
                                 <Text style={styles.text}>Entfernung:{getPreciseDistance({ latitude: this.state.location.coords.latitude, longitude: this.state.location.coords.longitude },
-                                { latitude: this.state.firstPlaceGerman.latitude, longitude: this.state.firstPlaceGerman.longitude })}</Text>
+                                { latitude: this.state.firstPlaceGerman.latitude, longitude: this.state.firstPlaceGerman.longitude })} - Meter</Text>
                             </ImageBackground>
                         </View>
                     )
