@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "navigation-example",
+    "name": "Aplicacion movil guia turistica",
+    "description": "Aplicacion movil para ayudar en la difusion de informacion cultural",
     "slug": "navigation-example",
     "version": "1.0.0",
     "orientation": "portrait",
