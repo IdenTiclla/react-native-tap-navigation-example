@@ -89,7 +89,7 @@ class Info extends React.Component {
 
     componentDidMount() {
         this._getLocation()
-        setInterval(()=> this._getLocation(), 10000)
+        setInterval(()=> this._getLocation(), 5000)
     }
 
     render() {

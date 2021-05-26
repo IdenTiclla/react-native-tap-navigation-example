@@ -74,7 +74,7 @@ class Places extends React.Component {
 
     componentDidMount() {
         this._getLocation()
-        setInterval(()=> this._getLocation(), 10000)
+        setInterval(()=> this._getLocation(), 5000)
     }
 
     // <PlaceCard onPressCard={()=> this.props.navigation.navigate('PlaceInfo',{person:{name:'iden', lastname:'ticlla'}})}></PlaceCard>
