@@ -1,23 +1,23 @@
 [
     {
-        "id": 1,
-        "latitude":-17.64287440739365,
-        "longitude": -63.140713587154195,
-        "title": "The Viru Viru Airport",
-        "description": "The Viru Viru airport owes its name to a medicinal herb called bira bira that abounds in the airport grounds, which initially was a training area for shooting and bombing of the Bolivian Air Force, then was chosen for the construction of the airport, its inauguration was on July 12, 1984, during the mandate of President Hernan Siles Suazo, Its runway has a length of 3500 meters, and has a passenger terminal, general aviation terminal and a cargo terminal with two platforms, in addition to a separate technical block where the control tower is located giving all the amenities for both domestic and international passengers and facilities for the arrival and departure of domestic and international cargo.",
-	    "image": "https://i.imgur.com/gg4lLEz.jpg",        
-        "audio":"",
-        "video": "https://mys3-iden.s3.amazonaws.com/en/1_viru_viru/Viru+Viru+ingles+.mp4"
+      "id": 1,
+      "latitude": -17.6483981,
+      "longitude": -63.1403433,
+      "title": "The Viru Viru Airport",
+      "description": "The Viru Viru airport owes its name to a medicinal herb called bira bira that abounds in the airport grounds, which initially was a training area for shooting and bombing of the Bolivian Air Force, then was chosen for the construction of the airport, its inauguration was on July 12, 1984, during the mandate of President Hernan Siles Suazo, Its runway has a length of 3500 meters, and has a passenger terminal, general aviation terminal and a cargo terminal with two platforms, in addition to a separate technical block where the control tower is located giving all the amenities for both domestic and international passengers and facilities for the arrival and departure of domestic and international cargo.",
+      "image": "https://i.imgur.com/gg4lLEz.jpg",
+      "audio": "",
+      "video": "https://mys3-iden.s3.amazonaws.com/en/1_viru_viru/Viru+Viru+ingles+.mp4"
     },
     {
-        "id": 2,
-        "latitude":-17.754925958345346,
-        "longitude": -63.174290189206474,
-        "title":"Hamacas Municipal Library and Cultural Center",
-        "description": "The Hamacas Municipal Library is located in District N° 2, U.V. 37 M.Z. EQ, directly benefiting a population of approximately 83,000 inhabitants, who reside in District 2. It is located in the northeast quadrant of the consolidated districts within the 4th Ring. It is bounded on the Northeast by the 4th Ring; on the Southeast by the 2nd Ring and Brazil Avenue; on the West by Christ the Redeemer Avenue. The Hamacas Municipal Library is a two-story building, which has a multipurpose room on the first floor for workshops, projection and exhibitions, with a capacity for 300 people. Upstairs, there is a specific space for bibliographic storage and book loans. Including reading and multimedia rooms (spaces for computers), children's reading room, with a capacity for 150 students of primary and secondary level. The outdoor areas, intended for exhibition and outdoor activities, consist of courtyards, dry squares and green areas, with street furniture, lighting, ornamentation and vegetation.",
-	    "image": "https://i.imgur.com/Ey0EBP1.png",
-        "audio":"",
-        "video": "https://mys3-iden.s3.amazonaws.com/en/2_biblioteca_municipal_y_centro_cultural_hamacas/Hamacas+ingles.mp4"
+      "id": 2,
+      "latitude": -17.77423609298659,
+      "longitude": -63.18310335925675,
+      "title": "Hamacas Municipal Library and Cultural Center",
+      "description": "The Hamacas Municipal Library is located in District N° 2, U.V. 37 M.Z. EQ, directly benefiting a population of approximately 83,000 inhabitants, who reside in District 2. It is located in the northeast quadrant of the consolidated districts within the 4th Ring. It is bounded on the Northeast by the 4th Ring; on the Southeast by the 2nd Ring and Brazil Avenue; on the West by Christ the Redeemer Avenue. The Hamacas Municipal Library is a two-story building, which has a multipurpose room on the first floor for workshops, projection and exhibitions, with a capacity for 300 people. Upstairs, there is a specific space for bibliographic storage and book loans. Including reading and multimedia rooms (spaces for computers), children's reading room, with a capacity for 150 students of primary and secondary level. The outdoor areas, intended for exhibition and outdoor activities, consist of courtyards, dry squares and green areas, with street furniture, lighting, ornamentation and vegetation.",
+      "image": "https://i.imgur.com/Ey0EBP1.png",
+      "audio": "",
+      "video": "https://mys3-iden.s3.amazonaws.com/en/2_biblioteca_municipal_y_centro_cultural_hamacas/Hamacas+ingles.mp4"
     },
     {
         "id": 3,
@@ -124,13 +124,13 @@
         "image":"https://i.imgur.com/RhHrALN.png"
     },
     {
-        "id": 13,
-        "latitude":-17.77423609298659,
-        "longitude": -63.18310335925675,
-        "title": "El trompillo Airport",
-        "description": "El Trompillo Airport is a local airport in the city of Santa Cruz de la Sierra, Bolivia. It is located in the southwestern part of the city surrounded by the urban sprawl; its use is generally for domestic flights. Until the mid-1980s it was an international airport and has since been replaced by the current Viru Viru International Airport. After a series of improvements, on June 3, 2014 the airport regained its international airport status making Santa Cruz de la Sierra the only city in Bolivia with two international airports, suitable as a backup and/or support international airport for high demand occasions when the Viru Viru airport cannot fully supply.",
-        "audio":"",
-        "video": "https://mys3-iden.s3.amazonaws.com/en/13_aeropuerto_el_trompillo/trompillo+ingles.mp4",
-        "image":"https://i.imgur.com/Z2YdpCc.jpg"
+      "id": 13,
+      "latitude": -17.80105477991134,
+      "longitude": -63.17578056054535,
+      "title": "El trompillo Airport",
+      "description": "El Trompillo Airport is a local airport in the city of Santa Cruz de la Sierra, Bolivia. It is located in the southwestern part of the city surrounded by the urban sprawl; its use is generally for domestic flights. Until the mid-1980s it was an international airport and has since been replaced by the current Viru Viru International Airport. After a series of improvements, on June 3, 2014 the airport regained its international airport status making Santa Cruz de la Sierra the only city in Bolivia with two international airports, suitable as a backup and/or support international airport for high demand occasions when the Viru Viru airport cannot fully supply.",
+      "audio": "",
+      "video": "https://mys3-iden.s3.amazonaws.com/en/13_aeropuerto_el_trompillo/trompillo+ingles.mp4",
+      "image": "https://i.imgur.com/Z2YdpCc.jpg"
     }
 ]
